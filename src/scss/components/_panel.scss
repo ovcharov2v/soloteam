@@ -1,5 +1,20 @@
 .panel {
 	background-color: var(--color-block-bg);
-	border-radius: 40px;
+	border-radius: 26px;
 	overflow: hidden;
+	width: calc(100% + 32px);
+	margin-left: -16px;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@include tablet {
+		width: unset;
+		margin-left: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@include desktop {
+		border-radius: 40px;
+	}
 }

@@ -1,13 +1,26 @@
 .advantages-list {
 	display: grid;
-	grid-template: auto / repeat(3, 300px);
-	grid-gap: 76px 168px;
+	grid-gap: 40px 16px;
 	max-width: 1236px;
-	padding-top: 64px;
-	padding-bottom: 64px;
+	padding-top: 46px;
+	padding-bottom: 46px;
+
+	@include tablet {
+		grid-template: auto / repeat(2, 1fr);
+	}
+
+	@include desktop {
+		grid-template: auto / repeat(3, 300px);
+		grid-gap: 76px 168px;
+		padding-top: 64px;
+		padding-bottom: 64px;
+	}
 
 	&__elem {
 		width: 100%;
-		max-width: 300px;
+
+		@include tablet {
+			max-width: 300px;
+		}
 	}
 }

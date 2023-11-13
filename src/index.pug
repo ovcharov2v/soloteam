@@ -13,21 +13,22 @@ block content
 			.row.row--cols-2
 				.row__elem
 					.section-hero__content
-						h1.heading1.section-hero__title Платформа для работы с вашей
-							|
-							|
-							i базой фрилансеров
-						h2.section-hero__text Создавайте и управляйте вашей базой фрилансеров, вовремя находите людей на проект и не тратьте время на переговоры.
-						a.button.button--with-icon.section-hero__link(href="#")
-							|Начать бесплатно
-							+svg("chevron")(class="button__icon")
+						.section-hero__text-box
+							h1.heading1.section-hero__title Платформа для работы с вашей
+								|
+								|
+								i базой фрилансеров
+							h2.section-hero__text Создавайте и управляйте вашей базой фрилансеров, вовремя находите людей на проект и не тратьте время на переговоры.
+							a.button.button--with-icon.section-hero__link(href="#")
+								|Начать бесплатно
+								+svg("chevron")(class="button__icon")
 						.section-hero__list-box
 							p.note.section-hero__note Улучшает процессы:
 							ul.list-audience.section-hero__list
 								li.list-audience__elem
 									+picture("audience1")(class="list-audience__img")
 									h3.list-audience__text Агентствaм
-								li.list-audience__elem
+								li.list-audience__elem.list-audience__elem--hide-mobile
 									+picture("audience2")(class="list-audience__img")
 									h3.list-audience__text Продюссерам
 								li.list-audience__elem
@@ -55,8 +56,8 @@ block content
 						|
 						i которая обновляется сама
 					blockquote.blockquote.blockquote--yellow.section__blockquote
-						span.blockquote__text Обычно, база фрилансеров это список в Notion или Exel, с кучей неактуальных данных. Приходится писать сразу всем.
-					p В Soloteam — все данные обновляются автоматически: ставка в час, грейд и занятость фрилансера. Вы заранее понимаете кому предложить задачу.
+						span.blockquote__text Обычно, база фрилансеров это список в Notion или Exel, сˆкучей неактуальных данных. Приходится писать сразу всем.
+					p.section__text В Soloteam — все данные обновляются автоматически: ставка в час, грейд и занятость фрилансера. Вы заранее понимаете кому предложить задачу.
 			.row__elem
 				+picture("screen1")(class="section__image")
 	// Section
@@ -93,15 +94,15 @@ block content
 						|
 						|
 						| фрилансера под  проект
-					p Часто не понятно кого из вашего списка позвать на проект — кто-то занят или уже не фрилансит.
-					blockquote.blockquote
+					p.section__text Часто не понятно кого из вашего списка позвать на проект — кто-то занят или уже не фрилансит.
+					blockquote.blockquote.section__blockquote
 						span.blockquote__text В Soloteam вы сможете сразу понять кто вам подходит — пишите не всем 50-ти исполнителям, а только подходящим 5-ти
 			.row__elem
 				+picture("screen3")(class="section__image")
 	// Section Instruction
 	section#how-it-works.section-instruction.container
 		.panel
-			.row.row--cols-2
+			.row.row--cols-2.section-instruction__row
 				.row__elem
 					.section-instruction__content
 						h2.heading2.section-instruction__title
@@ -160,7 +161,7 @@ block content
 					i базу фрилансеров
 					|
 					|
-					| и работайте стабильно
+					| и работайте стабильно
 				p.section-offer__text Пробный месяц —
 					|
 					|

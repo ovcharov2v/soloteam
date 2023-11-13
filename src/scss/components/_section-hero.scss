@@ -1,24 +1,67 @@
 .section-hero {
-	padding-top: 94px;
-	padding-bottom: 50px;
+	padding-top: 68px;
+	padding-bottom: 26px;
 	background-color: var(--color-block-bg);
 
+	@include tablet {
+		padding-top: 94px;
+		padding-bottom: 34px;
+	}
+
+	@include desktop {
+		padding-bottom: 50px;
+	}
+
 	&__content {
-		max-width: 560px;
-		padding-top: 20px;
+		@include tablet {
+			text-align: center;
+		}
+
+		@include desktop {
+			max-width: 560px;
+			padding-top: 20px;
+			text-align: left;
+		}
+	}
+
+	&__text-box {
+		max-width: 500px;
+		margin: 0 auto;
+
+		@include desktop {
+			max-width: unset;
+			margin: unset;
+		}
 	}
 
 	&__title {
-		margin-bottom: 32px;
+		margin-bottom: 24px;
+
+		@include desktop {
+			margin-bottom: 32px;
+		}
 	}
 
 	&__text {
-		margin-bottom: 30px;
-		font-size: 20px;
+		margin-bottom: 24px;
+		font-size: 17px;
+
+		@include desktop {
+			margin-bottom: 30px;
+			font-size: 20px;
+		}
 	}
 
 	&__link {
-		margin-bottom: 68px;
+		margin-bottom: 64px;
+
+		@include tablet {
+			margin-bottom: 48px;
+		}
+
+		@include desktop {
+			margin-bottom: 68px;
+		}
 	}
 
 	&__list-box {
@@ -35,6 +78,17 @@
 
 	&__box {
 		position: relative;
+		max-width: 500px;
+		margin-bottom: 24px;
+
+		@include tablet {
+			margin: 0 auto 48px;
+		}
+
+		@include desktop {
+			max-width: 100%;
+			margin: 0;
+		}
 	}
 
 	&__img {
@@ -42,31 +96,71 @@
 		z-index: 1;
 
 		&--n1 {
-			top: 20%;
-			left: -10px;
-			width: 41.9%;
+			top: 21%;
+			left: 45%;
+			width: 44.9%;
+
+			@include tablet {
+				top: 13%;
+				left: -6px;
+				width: 41.9%;
+			}
+
+			@include desktop {
+				top: 20%;
+				left: -10px;
+			}
 		}
 
 		&--n2 {
-			top: 58%;
-			right: 6%;
-			width: 32.8%;
+			top: 61%;
+			left: 45%;
+			width: 35.8%;
+
+			@include tablet {
+				top: 52%;
+				right: 3%;
+				left: unset;
+				width: 32.8%;
+			}
+
+			@include desktop {
+				top: 58%;
+				right: 6%;
+			}
 		}
 	}
 
 	&__video-box {
 		position: relative;
-		width: 62%;
-		margin: 0 auto;
+		width: 64%;
 		border: 1px solid var(--color-white);
-		border-radius: 28px;
+		border-radius: 20px;
 		background-color: var(--color-black-op10);
-		transform: translate(-24px);
+		transform: translate(-8px);
 
 		&::before {
 			display: block;
-			padding-top: 140%;
+			padding-top: 130%;
 			content: "";
+		}
+
+		@include tablet {
+			margin: 0 auto;
+
+			&::before {
+				padding-top: 136%;
+			}
+		}
+
+		@include desktop {
+			width: 62%;
+			border-radius: 28px;
+			transform: translate(-24px);
+
+			&::before {
+				padding-top: 140%;
+			}
 		}
 	}
 
@@ -77,6 +171,10 @@
 		width: calc(100% - 14px);
 		height: calc(100% - 14px);
 		object-fit: cover;
-		border-radius: 22px;
+		border-radius: 12px;
+
+		@include desktop {
+			border-radius: 22px;
+		}
 	}
 }

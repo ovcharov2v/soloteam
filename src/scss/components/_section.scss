@@ -1,40 +1,89 @@
 .section {
-	padding-top: 64px;
-	padding-bottom: 64px;
+	padding-top: 56px;
+	padding-bottom: 56px;
+
+	@include desktop {
+		padding-top: 64px;
+		padding-bottom: 64px;
+	}
 
 	&__content {
-		max-width: 540px;
-		padding-top: 32px;
+		padding-top: 10px;
 
-		.section--first & {
+		@include desktop {
 			padding-top: 32px;
+			max-width: 540px;
 		}
 
 		.section--second & {
-			padding-top: 64px;
+			@include desktop {
+				padding-top: 64px;
+			}
 		}
 	}
 
 	&__title {
+		max-width: 500px;
+
+		@include desktop {
+			max-width: unset;
+		}
+
 		.section--first & {
-			margin-bottom: 32px;
+			margin-bottom: 24px;
+
+			@include desktop {
+				margin-bottom: 32px;
+			}
 		}
 
 		.section--second & {
-			margin-bottom: 48px;
+			margin-bottom: 32px;
+
+			@include desktop {
+				margin-bottom: 48px;
+			}
 		}
 
 		.section--third & {
-			margin-bottom: 40px;
+			margin-bottom: 25px;
+
+			@include desktop {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&__text {
+		max-width: 500px;
+
+		@include desktop {
+			max-width: unset;
 		}
 	}
 
 	&__list {
+		max-width: 320px;
 		margin-bottom: 48px;
+
+		@include tablet {
+			max-width: 460px;
+			margin-bottom: 45px;
+		}
+
+		@include desktop {
+			max-width: unset;
+			margin-bottom: 48px;
+		}
 	}
 
 	&__blockquote {
-		max-width: 528px;
-		margin-bottom: 40px;
+		max-width: 600px;
+		margin-bottom: 28px;
+
+		@include desktop {
+			max-width: 528px;
+			margin-bottom: 40px;
+		}
 	}
 }

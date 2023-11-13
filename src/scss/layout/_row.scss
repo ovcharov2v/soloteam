@@ -1,9 +1,16 @@
 .row {
 	display: flex;
 	margin: 0 -16px;
+	flex-direction: column-reverse;
+
+	@include desktop {
+		flex-direction: row;
+	}
 
 	&--reverse {
-		flex-direction: row-reverse;
+		@include desktop {
+			flex-direction: row-reverse;
+		}
 	}
 
 	&__elem {
@@ -11,7 +18,9 @@
 		padding: 0 16px;
 
 		.row--cols-2 & {
-			max-width: 50%;
+			@include desktop {
+				max-width: 50%;
+			}
 		}
 	}
 }

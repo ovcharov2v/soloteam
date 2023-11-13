@@ -10,8 +10,24 @@
 	padding-bottom: 12px;
 	background-color: var(--color-block-bg);
 
+	&__logo {
+		max-width: 110px;
+
+		@include desktop-xl {
+			max-width: 165px;
+		}
+	}
+
 	&__nav {
-		padding: 0 40px;
+		display: none;
+
+		@include desktop {
+			display: block;
+		}
+
+		@include desktop-xxl {
+			padding: 0 40px;
+		}
 	}
 
 	&__nav-list {
@@ -71,6 +87,7 @@
 		display: flex;
 		margin-left: auto;
 	}
+
 	&__button {
 		&:not(:last-child) {
 			margin-right: 10px;

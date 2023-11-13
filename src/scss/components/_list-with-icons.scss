@@ -1,16 +1,31 @@
 .list-with-icons {
 	&__elem {
 		display: flex;
-		font-size: 18px;
+		font-size: 15px;
+
+		@include desktop {
+			font-size: 18px;
+		}
 
 		&:not(:last-child) {
-			margin-bottom: 16px;
+			margin-bottom: 25px;
+
+			@include desktop {
+				margin-bottom: 16px;
+			}
 		}
 	}
+
 	&__icon {
 		flex-shrink: 0;
-		width: 56px;
-		height: 56px;
-		margin-right: 24px;
+		width: 40px;
+		height: 40px;
+		margin-right: 8px;
+
+		@include desktop {
+			width: 56px;
+			height: 56px;
+			margin-right: 24px;
+		}
 	}
 }

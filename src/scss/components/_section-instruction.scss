@@ -2,19 +2,47 @@
 	padding-top: 48px;
 	padding-bottom: 48px;
 
+	&__row {
+		flex-direction: column;
+
+		@include desktop {
+			flex-direction: row;
+		}
+	}
+
 	&__content {
-		padding-top: 72px;
-		padding-left: 48px;
+		padding-top: 32px;
+
+		@include tablet {
+			padding: 32px 40px 0;
+		}
+
+		@include desktop {
+			padding: 72px 0 0 48px;
+		}
 	}
 
 	&__title {
-		margin-bottom: 24px;
+		margin-bottom: 8px;
+
+		@include tablet {
+			margin-bottom: -24px;
+		}
+
+		@include desktop {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__list-box {
-		padding: 72px 0;
-		max-width: 438px;
+		padding: 36px 0;
+		max-width: 586px;
 		margin: 0 auto;
+
+		@include desktop {
+			padding: 72px 0;
+			max-width: 438px;
+		}
 	}
 
 	&__list {
@@ -23,5 +51,19 @@
 
 	&__link {
 		margin-bottom: 16px;
+	}
+
+	&__img {
+		display: block;
+
+		@include tablet {
+			max-width: calc(100% - 80px);
+			margin: 0 auto -41px;
+		}
+
+		@include desktop {
+			max-width: unset;
+			margin: unset;
+		}
 	}
 }

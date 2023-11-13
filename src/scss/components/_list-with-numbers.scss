@@ -6,9 +6,13 @@
 		position: relative;
 		display: block;
 		margin-top: 40px;
-		padding: 12px 0 27px;
+		padding: 11px 0 21px;
 		border-top: 1px solid var(--color-black-op10);
 		counter-increment: nums;
+
+		@include desktop {
+			padding: 12px 0 27px;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 16px;

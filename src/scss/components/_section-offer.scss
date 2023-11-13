@@ -1,11 +1,23 @@
 .section-offer {
-	padding-top: 64px;
+	padding-top: 42px;
 	padding-bottom: 32px;
+
+	@include desktop {
+		padding-top: 64px;
+	}
 
 	&__panel {
 		position: relative;
 		padding-top: 56px;
-		padding-bottom: 146px;
+		padding-bottom: 310px;
+		border-radius: 40px;
+
+		@include tablet {
+			padding-bottom: 212px;}
+
+		@include desktop {
+			padding-bottom: 146px;
+		}
 	}
 
 	&__content {
@@ -15,12 +27,30 @@
 	}
 
 	&__title {
-		margin-bottom: 56px;
+		margin: 0 auto 32px;
+		max-width: 333px;
+
+		@media (max-width: $breakpoint-desktop) {
+			font-size: 30px;
+		}
+
+		@include tablet {
+			max-width: unset;
+		}
+
+		@include desktop {
+			margin-bottom: 56px;
+		}
+
 	}
 
 	&__text {
 		margin-bottom: 12px;
-		font-size: 24px;
+		font-size: 17px;
+
+		@include desktop {
+			font-size: 24px;
+		}
 	}
 
 	&__img {
@@ -29,14 +59,36 @@
 
 		&--left {
 			left: 0;
+			max-width: 351px;
+
+			@include tablet {
+				max-width: 52.6%;}
+
+			@include desktop {
+				max-width: 36.6%;
+			}
 		}
 
 		&--right {
+			display: none;
 			right: 0;
+			max-width: 45.3%;
+
+			@include tablet {
+				display: block;
+			}
+
+			@include desktop {
+				max-width: 31.3%;
+			}
 		}
 	}
 
 	&__link {
-		margin-top: 56px;
+		margin-top: 32px;
+
+		@include desktop {
+			margin-top: 56px;
+		}
 	}
 }
