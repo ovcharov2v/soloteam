@@ -1,0 +1,27 @@
+.section-instruction {
+	padding-top: 48px;
+	padding-bottom: 48px;
+
+	&__content {
+		padding-top: 72px;
+		padding-left: 48px;
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__list-box {
+		padding: 72px 0;
+		max-width: 438px;
+		margin: 0 auto;
+	}
+
+	&__list {
+		margin-bottom: 32px;
+	}
+
+	&__link {
+		margin-bottom: 16px;
+	}
+}

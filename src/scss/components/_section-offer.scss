@@ -1,0 +1,42 @@
+.section-offer {
+	padding-top: 64px;
+	padding-bottom: 32px;
+
+	&__panel {
+		position: relative;
+		padding-top: 56px;
+		padding-bottom: 146px;
+	}
+
+	&__content {
+		max-width: 900px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__title {
+		margin-bottom: 56px;
+	}
+
+	&__text {
+		margin-bottom: 12px;
+		font-size: 24px;
+	}
+
+	&__img {
+		position: absolute;
+		bottom: 0;
+
+		&--left {
+			left: 0;
+		}
+
+		&--right {
+			right: 0;
+		}
+	}
+
+	&__link {
+		margin-top: 56px;
+	}
+}

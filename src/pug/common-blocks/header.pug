@@ -1,2 +1,19 @@
 mixin header()
-	header.header
+	header.header.container.container--fluid
+		img.header__logo(src="images/logo.svg", alt)
+		nav.header__nav
+			ul.header__nav-list
+				li.header__nav-elem
+					a.header__nav-link(href="#about") О нас
+				li.header__nav-elem
+					a.header__nav-link(href="#how-it-works") Как работает
+				li.header__nav-elem
+					a.header__nav-link(href="#advantages") Преимущества
+				li.header__nav-elem
+					span.header__nav-text Блог
+				li.header__nav-elem
+					span.header__nav-text Фрилансерам
+					span.header__nav-label скоро
+		.header__button-box
+			a.button.button--transparent.header__button(href="#") Вход
+			a.button.button--outline-black.header__button(href="#") Начать бесплатно

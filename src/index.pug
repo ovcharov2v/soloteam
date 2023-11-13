@@ -7,4 +7,173 @@ append vars
 	- title = "Main page"
 
 block content
-	h1 Soloteam
+	// Section Hero
+	section.section-hero
+		.container
+			.row.row--cols-2
+				.row__elem
+					.section-hero__content
+						h1.heading1.section-hero__title Платформа для работы с вашей
+							|
+							|
+							i базой фрилансеров
+						h2.section-hero__text Создавайте и управляйте вашей базой фрилансеров, вовремя находите людей на проект и не тратьте время на переговоры.
+						a.button.button--with-icon.section-hero__link(href="#")
+							|Начать бесплатно
+							+svg("chevron")(class="button__icon")
+						.section-hero__list-box
+							p.note.section-hero__note Улучшает процессы:
+							ul.list-audience.section-hero__list
+								li.list-audience__elem
+									+picture("audience1")(class="list-audience__img")
+									h3.list-audience__text Агентствaм
+								li.list-audience__elem
+									+picture("audience2")(class="list-audience__img")
+									h3.list-audience__text Продюссерам
+								li.list-audience__elem
+									+picture("audience3")(class="list-audience__img")
+									h3.list-audience__text Проджектам
+								li.list-audience__elem
+									+picture("audience4")(class="list-audience__img")
+									h3.list-audience__text Фрилансерам
+				.row__elem
+					.section-hero__box
+						+picture("img1")(class="section-hero__img section-hero__img--n1")
+						+picture("img2")(class="section-hero__img section-hero__img--n2")
+						.section-hero__video-box
+							video.section-hero__video(preload='true', autoplay, loop, muted, poster='video/soloteamhero-poster.webp', playsinline)
+								source(src='video/soloteamhero.mp4', type='video/mp4')
+								source(src='video/soloteamhero.webm', type='video/webm')
+
+	// Section
+	section#about.section.section--first.container
+		.row.row--cols-2
+			article.row__elem
+				.section__content
+					h2.heading2.section__title Создайте базу фрилансеров,
+						|
+						|
+						i которая обновляется сама
+					blockquote.blockquote.blockquote--yellow.section__blockquote
+						span.blockquote__text Обычно, база фрилансеров это список в Notion или Exel, с кучей неактуальных данных. Приходится писать сразу всем.
+					p В Soloteam — все данные обновляются автоматически: ставка в час, грейд и занятость фрилансера. Вы заранее понимаете кому предложить задачу.
+			.row__elem
+				+picture("screen1")(class="section__image")
+	// Section
+	section.section.section--second.container
+		.row.row--cols2.row--reverse
+			article.row__elem
+				.section__content
+					h2.heading2.section__title Легко добавляйте и 
+						i приглашайте
+						|
+						|
+						| исполнителей
+					ul.list-with-icons.section__list
+						li.list-with-icons__elem
+							+svg('list-icon1')(class="list-with-icons__icon")
+							| Импортируйте существующую базу или создайте новую в два клика
+						li.list-with-icons__elem
+							+svg('list-icon2')(class="list-with-icons__icon")
+							| Отправьте приглашение фрилансеру — он сам добавится и заполнит профиль
+					a.button.button--with-icon(href="#")
+						| Начать бесплатно
+						+svg("chevron")(class="button__icon")
+			.row__elem
+				+picture("screen2")(class="section__image")
+	// Section
+	section.section.section--third.container
+		.row.row--cols-2
+			article.row__elem
+				.section__content
+					h2.heading2.section__title Быстрее
+						|
+						|
+						i выбирайте
+						|
+						|
+						| фрилансера под  проект
+					p Часто не понятно кого из вашего списка позвать на проект — кто-то занят или уже не фрилансит.
+					blockquote.blockquote
+						span.blockquote__text В Soloteam вы сможете сразу понять кто вам подходит — пишите не всем 50-ти исполнителям, а только подходящим 5-ти
+			.row__elem
+				+picture("screen3")(class="section__image")
+	// Section Instruction
+	section#how-it-works.section-instruction.container
+		.panel
+			.row.row--cols-2
+				.row__elem
+					.section-instruction__content
+						h2.heading2.section-instruction__title
+							i Вы находите фрилансеров,
+							|
+							|
+							| а мы поддерживаем информацию о них актуальной
+					+picture("schema")(class="section-instruction__img")
+				.row__elem
+					.section-instruction__list-box
+						ol.list-with-numbers.section-instruction__list
+							li.list-with-numbers__elem Вы как компания создаете базу и добавляете туда всех знакомых фрилансеров с которыми работали или планируете
+							li.list-with-numbers__elem Фрилансеры тоже создают аккаунты и регулярно обновляют данные о себе, а Soloteam заботиться об этом
+							li.list-with-numbers__elem У вас всегда актуальная информация, чтобы быстро и точно принимать решения
+						a.button.button--with-icon.section-instruction__link(href="#")
+							| Начать бесплатно
+							+svg("chevron")(class="button__icon")
+						p.note Без привязки карты
+
+	// Advantages list
+	#advantages.container
+		.advantages-list
+			figrure.advantage.advantages-list__elem
+				+svg("advantage1")(class="advantage__icon")
+				figcaption
+					h3.advantage__title Быстро подберите исполнителя
+					p.advantage__text Мы заботимся, чтобы у вас всегда была нужная и актуальная информация для принятия решений.
+			figrure.advantage.advantages-list__elem
+				+svg("advantage2")(class="advantage__icon")
+				figcaption
+					h3.advantage__title Отстройте процессы
+					p.advantage__text Не храните контакты в голове или мессенджерах. Организуйте процессы по работе с фрилансерами.
+			figrure.advantage.advantages-list__elem
+				+svg("advantage3")(class="advantage__icon")
+				figcaption
+					h3.advantage__title Отслеживайте доступность
+					p.advantage__text Вы сможете быстро находить доступных фрилансеров для предстоящих проектов.
+			figrure.advantage.advantages-list__elem
+				+svg("advantage4")(class="advantage__icon")
+				figcaption
+					h3.advantage__title Ваши фрилансеры — только ваши
+					p.advantage__text Soloteam не биржа для поиска фрилансеров. Мы никому не передаем данные вашей базы.
+			figrure.advantage.advantages-list__elem
+				+svg("advantage5")(class="advantage__icon")
+				figcaption
+					h3.advantage__title Импортируйте базу на Soloteam
+					p.advantage__text Если у вас уже есть база фрилансеров в Notion или Exel, мы сами перенесем ее на сервис.
+
+	// Section Offer
+	section.section-offer.container
+		.panel.section-offer__panel
+			.section-offer__content
+				h2.heading1.section-offer__title Организуйте свою
+					|
+					|
+					i базу фрилансеров
+					|
+					|
+					| и работайте стабильно
+				p.section-offer__text Пробный месяц —
+					|
+					|
+					strong бесплатно,
+					|
+					|
+					| затем
+					|
+					|
+					strong 690₽/мес
+				p.note Без привязки карты
+				a.button.button--with-icon.section-offer__link(href="#")
+					| Создать аккаунт
+					+svg("chevron")(class="button__icon")
+			+picture("offer-img1")(class="section-offer__img section-offer__img--left")
+			+picture("offer-img2")(class="section-offer__img section-offer__img--right")

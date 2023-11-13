@@ -1,3 +1,10 @@
-$color-black: #0f0f0f;
-$color-white: #fff;
-$color-transparent: rgba(#fff, 0);
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-black-op75: rgba(0,0,0,.73);
+	--color-black-op50: rgba(0,0,0,.5);
+	--color-black-op10: rgba(0,0,0,.1);
+	--color-black-op08: rgba(0,0,0,.08);
+	--color-bg: #FDFCF7;
+	--color-block-bg: #FAFB85;
+}

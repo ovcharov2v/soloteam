@@ -1,0 +1,13 @@
+.advantages-list {
+	display: grid;
+	grid-template: auto / repeat(3, 300px);
+	grid-gap: 76px 168px;
+	max-width: 1236px;
+	padding-top: 64px;
+	padding-bottom: 64px;
+
+	&__elem {
+		width: 100%;
+		max-width: 300px;
+	}
+}

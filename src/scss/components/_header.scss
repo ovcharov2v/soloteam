@@ -1,2 +1,79 @@
 .header {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: var(--color-block-bg);
+
+	&__nav {
+		padding: 0 40px;
+	}
+
+	&__nav-list {
+		display: flex;
+		margin: 0 -10px;
+	}
+
+	&__nav-elem {
+		position: relative;
+		font-size: 15px;
+		line-height: 18px;
+	}
+
+	&__nav-link {
+		padding: 0 10px;
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 8px;
+			right: 8px;
+			height: 1px;
+			background-color: var(--color-black);
+			content: "";
+			transform: scaleX(0);
+			transform-origin: 50% 0;
+			transition: transform $transition-default;
+		}
+
+		&:hover {
+			&::after {
+				transform: scaleX(1);
+			}
+		}
+	}
+
+	&__nav-text {
+		padding: 0 10px;
+		opacity: .32;
+	}
+
+	&__nav-label {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(26px, -10px) rotate(-7deg);
+		padding: 2px 4px;
+		background-color: var(--color-white);
+		border-radius: 20px;
+		font-size: 12px;
+		line-height: 1;
+		letter-spacing: -.02em;
+		color: var(--color-black-op50);
+	}
+
+	&__button-box {
+		display: flex;
+		margin-left: auto;
+	}
+	&__button {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
 }

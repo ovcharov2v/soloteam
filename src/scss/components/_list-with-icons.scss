@@ -1,0 +1,16 @@
+.list-with-icons {
+	&__elem {
+		display: flex;
+		font-size: 18px;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+	&__icon {
+		flex-shrink: 0;
+		width: 56px;
+		height: 56px;
+		margin-right: 24px;
+	}
+}

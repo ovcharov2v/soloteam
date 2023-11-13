@@ -1,0 +1,40 @@
+.section {
+	padding-top: 64px;
+	padding-bottom: 64px;
+
+	&__content {
+		max-width: 540px;
+		padding-top: 32px;
+
+		.section--first & {
+			padding-top: 32px;
+		}
+
+		.section--second & {
+			padding-top: 64px;
+		}
+	}
+
+	&__title {
+		.section--first & {
+			margin-bottom: 32px;
+		}
+
+		.section--second & {
+			margin-bottom: 48px;
+		}
+
+		.section--third & {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__list {
+		margin-bottom: 48px;
+	}
+
+	&__blockquote {
+		max-width: 528px;
+		margin-bottom: 40px;
+	}
+}

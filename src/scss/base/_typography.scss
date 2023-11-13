@@ -1,7 +1,35 @@
 body {
-	font-family: $font-primary;
+	font-family: var(--font-primary);
+	font-size: 18px;
+	line-height: 1.4;
+	-webkit-font-smoothing: antialiased;
+	color: var(--color-black);
 }
 
 input, button, textarea {
 	font-family: inherit;
+}
+
+i {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 700;
+}
+
+.heading1 {
+	font-family: var(--font-secondary);
+	font-size: 64px;
+	line-height: 1.1;
+	font-weight: 500;
+	letter-spacing: -.02em;
+}
+
+.heading2 {
+	font-family: var(--font-secondary);
+	font-size: 50px;
+	line-height: 1;
+	font-weight: 500;
+	letter-spacing: -.028em;
 }
