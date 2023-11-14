@@ -15,5 +15,8 @@ mixin header()
 					span.header__nav-text Фрилансерам
 					span.header__nav-label скоро
 		.header__button-box
-			a.button.button--transparent.header__button(href="#") Вход
-			a.button.button--outline-black.header__button(href="#") Начать бесплатно
+			a.button.button--transparent.header__button.header__button--login(href="#") Вход
+			a.button.button--outline-black-mobile.header__button(href="#") Начать бесплатно
+			button.header__menu-btn(aria-label="Мобильное меню")
+				+svg("burger")(class="header__menu-btn-icon header__menu-btn-icon--burger")
+				+svg("close")(class="header__menu-btn-icon header__menu-btn-icon--close")

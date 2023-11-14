@@ -26,7 +26,10 @@
 
 	&__text-box {
 		max-width: 500px;
-		margin: 0 auto;
+
+		@include tablet {
+			margin: 0 auto;
+		}
 
 		@include desktop {
 			max-width: unset;

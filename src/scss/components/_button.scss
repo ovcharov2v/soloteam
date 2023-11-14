@@ -29,8 +29,9 @@
 		margin-left: 11px;
 	}
 
-	&--outline-black {
-		padding: 13px 20px;
+	&--outline-black,
+	&--outline-black-mobile {
+		padding: 15px 24px;
 		border: 1px solid var(--color-black);
 		border-radius: 70px;
 		font-size: 17px;
@@ -41,10 +42,34 @@
 			background-color: var(--color-black);
 			color: var(--color-white);
 		}
+	}
+
+	&--outline-black-mobile {
+		padding: 7px 12px;
+		font-size: 14px;
+		line-height: 17px;
 
 		@include desktop {
+			padding: 13px 20px;
+		}
+
+		@include desktop-xl {
 			font-size: 15px;
 			line-height: 18px;
+		}
+	}
+
+	&--black {
+		padding: 15px 24px;
+		border: 1px solid var(--color-black);
+		background-color: var(--color-black);
+		border-radius: 70px;
+		font-size: 17px;
+		line-height: 20px;
+		color: var(--color-white);
+
+		&:hover {
+			background-color: var(--color-black-op75);
 		}
 	}
 

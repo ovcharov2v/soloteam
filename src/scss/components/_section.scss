@@ -1,6 +1,12 @@
 .section {
 	padding-top: 56px;
 	padding-bottom: 56px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (max-width: $breakpoint-desktop) {
+		max-width: 700px;
+	}
 
 	@include desktop {
 		padding-top: 64px;
@@ -78,8 +84,12 @@
 	}
 
 	&__blockquote {
-		max-width: 600px;
+		max-width: 360px;
 		margin-bottom: 28px;
+
+		@include tablet {
+			max-width: 600px;
+		}
 
 		@include desktop {
 			max-width: 528px;

@@ -1,10 +1,15 @@
 .footer {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	padding-top: 21px;
 	padding-bottom: 10px;
 	border-top: 1px solid var(--color-black-op10);
 	color: var(--color-black-op50);
+
+	@include tablet {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 
 	@include desktop {
 		padding-top: 16px;
@@ -21,8 +26,13 @@
 		}
 
 		&--left {
+			margin-bottom: 8px;
 			font-size: 14px;
 			line-height: 17px;
+
+			@include tablet {
+				margin-bottom: 0;
+			}
 
 			@include desktop-xl {
 				font-size: 15px;

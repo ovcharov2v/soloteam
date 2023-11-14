@@ -284,6 +284,7 @@ html(class=html.classList)&attributes(html.attrs)
 		main.main
 			block content
 		+footer()
+		+mobile-menu()
 		include ../images/sprite/sprite.svg
 		block scripts
 			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
