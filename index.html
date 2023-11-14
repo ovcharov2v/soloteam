@@ -4,8 +4,9 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width">
-		<title>Main page</title>
-		<link rel="stylesheet" href="./css/main.css?v=1699921478906">
+		<meta name="description" content="Soloteam description">
+		<title>Soloteam</title>
+		<link rel="stylesheet" href="./css/main.css?v=1699966582456">
 	</head>
 	<body>
 		<header class="header container container--fluid"><img class="header__logo" src="images/logo.svg" alt="alt"/>
@@ -18,7 +19,16 @@
 					<li class="header__nav-elem"><span class="header__nav-text">Фрилансерам</span><span class="header__nav-label">скоро</span></li>
 				</ul>
 			</nav>
-			<div class="header__button-box"><a class="button button--transparent header__button" href="#">Вход</a><a class="button button--outline-black header__button" href="#">Начать бесплатно</a></div>
+			<div class="header__button-box"><a class="button button--transparent header__button header__button--login" href="#">Вход</a><a class="button button--outline-black-mobile header__button" href="#">Начать бесплатно</a>
+				<button class="header__menu-btn" aria-label="Мобильное меню">
+					<svg class="header__menu-btn-icon header__menu-btn-icon--burger">
+						<use xlink:href="#burger"></use>
+					</svg>
+					<svg class="header__menu-btn-icon header__menu-btn-icon--close">
+						<use xlink:href="#close"></use>
+					</svg>
+				</button>
+			</div>
 		</header>
 		<main class="main">
 			<!-- Section Hero-->
@@ -42,25 +52,25 @@
 									<ul class="list-audience section-hero__list">
 										<li class="list-audience__elem">
 											<picture>
-												<source srcset="images/audience1@1x.webp, images/audience1@2x.webp 2x" type="image/webp"/><img class="list-audience__img" src="images/audience1@1x.png" srcset="images/audience1@2x.png 2x" alt=""/>
+												<source srcset="images/audience1@1x.webp, images/audience1@2x.webp 2x" type="image/webp"/><img class="list-audience__img" src="images/audience1@1x.png" srcset="images/audience1@2x.png 2x" alt="" loading="lazy"/>
 											</picture>
 											<h3 class="list-audience__text">Агентствaм</h3>
 										</li>
 										<li class="list-audience__elem list-audience__elem--hide-mobile">
 											<picture>
-												<source srcset="images/audience2@1x.webp, images/audience2@2x.webp 2x" type="image/webp"/><img class="list-audience__img" src="images/audience2@1x.png" srcset="images/audience2@2x.png 2x" alt=""/>
+												<source srcset="images/audience2@1x.webp, images/audience2@2x.webp 2x" type="image/webp"/><img class="list-audience__img" src="images/audience2@1x.png" srcset="images/audience2@2x.png 2x" alt="" loading="lazy"/>
 											</picture>
 											<h3 class="list-audience__text">Продюссерам</h3>
 										</li>
 										<li class="list-audience__elem">
 											<picture>
-												<source srcset="images/audience3@1x.webp, images/audience3@2x.webp 2x" type="image/webp"/><img class="list-audience__img" src="images/audience3@1x.png" srcset="images/audience3@2x.png 2x" alt=""/>
+												<source srcset="images/audience3@1x.webp, images/audience3@2x.webp 2x" type="image/webp"/><img class="list-audience__img" src="images/audience3@1x.png" srcset="images/audience3@2x.png 2x" alt="" loading="lazy"/>
 											</picture>
 											<h3 class="list-audience__text">Проджектам</h3>
 										</li>
 										<li class="list-audience__elem">
 											<picture>
-												<source srcset="images/audience4@1x.webp, images/audience4@2x.webp 2x" type="image/webp"/><img class="list-audience__img" src="images/audience4@1x.png" srcset="images/audience4@2x.png 2x" alt=""/>
+												<source srcset="images/audience4@1x.webp, images/audience4@2x.webp 2x" type="image/webp"/><img class="list-audience__img" src="images/audience4@1x.png" srcset="images/audience4@2x.png 2x" alt="" loading="lazy"/>
 											</picture>
 											<h3 class="list-audience__text">Фрилансерам</h3>
 										</li>
@@ -71,10 +81,10 @@
 						<div class="row__elem">
 							<div class="section-hero__box">
 								<picture>
-									<source srcset="images/img1@1x.webp, images/img1@2x.webp 2x" type="image/webp"/><img class="section-hero__img section-hero__img--n1" src="images/img1@1x.png" srcset="images/img1@2x.png 2x" alt=""/>
+									<source srcset="images/img1@1x.webp, images/img1@2x.webp 2x" type="image/webp"/><img class="section-hero__img section-hero__img--n1" src="images/img1@1x.png" srcset="images/img1@2x.png 2x" alt="" loading="lazy"/>
 								</picture>
 								<picture>
-									<source srcset="images/img2@1x.webp, images/img2@2x.webp 2x" type="image/webp"/><img class="section-hero__img section-hero__img--n2" src="images/img2@1x.png" srcset="images/img2@2x.png 2x" alt=""/>
+									<source srcset="images/img2@1x.webp, images/img2@2x.webp 2x" type="image/webp"/><img class="section-hero__img section-hero__img--n2" src="images/img2@1x.png" srcset="images/img2@2x.png 2x" alt="" loading="lazy"/>
 								</picture>
 								<div class="section-hero__video-box">
 									<video class="section-hero__video" preload="true" autoplay loop muted poster="video/soloteamhero-poster.webp" playsinline>
@@ -96,13 +106,13 @@
 								Создайте базу фрилансеров,
 								<i>которая обновляется сама</i>
 							</h2>
-							<blockquote class="blockquote blockquote--yellow section__blockquote"><span class="blockquote__text">Обычно, база фрилансеров это список в Notion или Exel, сˆкучей неактуальных данных. Приходится писать сразу всем.</span></blockquote>
+							<blockquote class="blockquote blockquote--yellow section__blockquote"><span class="blockquote__text">Обычно, база фрилансеров это список в Notion или Exel, с кучей неактуальных данных. Приходится писать сразу всем.<span class="blockquote__arrow-box"></span></span></blockquote>
 							<p class="section__text">В Soloteam — все данные обновляются автоматически: ставка в час, грейд и занятость фрилансера. Вы заранее понимаете кому предложить задачу.</p>
 						</div>
 					</article>
 					<div class="row__elem">
 						<picture>
-							<source srcset="images/screen1@1x.webp, images/screen1@2x.webp 2x" type="image/webp"/><img class="section__image" src="images/screen1@1x.png" srcset="images/screen1@2x.png 2x" alt=""/>
+							<source srcset="images/screen1@1x.webp, images/screen1@2x.webp 2x" type="image/webp"/><img class="section__image" src="images/screen1@1x.png" srcset="images/screen1@2x.png 2x" alt="" loading="lazy"/>
 						</picture>
 					</div>
 				</div>
@@ -135,7 +145,7 @@
 					</article>
 					<div class="row__elem">
 						<picture>
-							<source srcset="images/screen2@1x.webp, images/screen2@2x.webp 2x" type="image/webp"/><img class="section__image" src="images/screen2@1x.png" srcset="images/screen2@2x.png 2x" alt=""/>
+							<source srcset="images/screen2@1x.webp, images/screen2@2x.webp 2x" type="image/webp"/><img class="section__image" src="images/screen2@1x.png" srcset="images/screen2@2x.png 2x" alt="" loading="lazy"/>
 						</picture>
 					</div>
 				</div>
@@ -157,7 +167,7 @@
 					</article>
 					<div class="row__elem">
 						<picture>
-							<source srcset="images/screen3@1x.webp, images/screen3@2x.webp 2x" type="image/webp"/><img class="section__image" src="images/screen3@1x.png" srcset="images/screen3@2x.png 2x" alt=""/>
+							<source srcset="images/screen3@1x.webp, images/screen3@2x.webp 2x" type="image/webp"/><img class="section__image" src="images/screen3@1x.png" srcset="images/screen3@2x.png 2x" alt="" loading="lazy"/>
 						</picture>
 					</div>
 				</div>
@@ -174,7 +184,7 @@
 								</h2>
 							</div>
 							<picture>
-								<source srcset="images/schema@1x.webp, images/schema@2x.webp 2x" type="image/webp"/><img class="section-instruction__img" src="images/schema@1x.png" srcset="images/schema@2x.png 2x" alt=""/>
+								<source srcset="images/schema@1x.webp, images/schema@2x.webp 2x" type="image/webp"/><img class="section-instruction__img" src="images/schema@1x.png" srcset="images/schema@2x.png 2x" alt="" loading="lazy"/>
 							</picture>
 						</div>
 						<div class="row__elem">
@@ -267,10 +277,10 @@
 							</svg></a>
 					</div>
 					<picture>
-						<source srcset="images/offer-img1@1x.webp, images/offer-img1@2x.webp 2x" type="image/webp"/><img class="section-offer__img section-offer__img--left" src="images/offer-img1@1x.png" srcset="images/offer-img1@2x.png 2x" alt=""/>
+						<source srcset="images/offer-img1@1x.webp, images/offer-img1@2x.webp 2x" type="image/webp"/><img class="section-offer__img section-offer__img--left" src="images/offer-img1@1x.png" srcset="images/offer-img1@2x.png 2x" alt="" loading="lazy"/>
 					</picture>
 					<picture>
-						<source srcset="images/offer-img2@1x.webp, images/offer-img2@2x.webp 2x" type="image/webp"/><img class="section-offer__img section-offer__img--right" src="images/offer-img2@1x.png" srcset="images/offer-img2@2x.png 2x" alt=""/>
+						<source srcset="images/offer-img2@1x.webp, images/offer-img2@2x.webp 2x" type="image/webp"/><img class="section-offer__img section-offer__img--right" src="images/offer-img2@1x.png" srcset="images/offer-img2@2x.png 2x" alt="" loading="lazy"/>
 					</picture>
 				</div>
 			</section>
@@ -290,7 +300,17 @@
 				<p>ИНН 230114835738</p><a class="footer__grey-link" href="#" target="blank" rel="noreferrer noopener">Политика конфиденциальности</a>
 				<p class="footer__copyright">Все права защищены © 2023</p>
 			</div>
-		</footer><svg width="0" height="0" class="hidden">
+		</footer>
+		<div class="mobile-menu">
+			<ul class="mobile-menu__nav-list">
+				<li class="mobile-menu__nav-elem"><a class="mobile-menu__nav-link" href="#about">О нас</a></li>
+				<li class="mobile-menu__nav-elem"><a class="mobile-menu__nav-link" href="#how-it-works">Как работает</a></li>
+				<li class="mobile-menu__nav-elem"><a class="mobile-menu__nav-link" href="#advantages">Преимущества</a></li>
+				<li class="mobile-menu__nav-elem"><span class="mobile-menu__nav-text">Блог</span></li>
+				<li class="mobile-menu__nav-elem"><span class="mobile-menu__nav-text">Фрилансерам</span></li>
+			</ul>
+			<div class="mobile-menu__button-box"><a class="button button--outline-black mobile-menu__button" href="#">Войти</a><a class="button button--black mobile-menu__button" href="#">Зарегистрироваться</a></div>
+		</div><svg width="0" height="0" class="hidden">
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" id="advantage3">
 		<path d="M56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0C43.464 0 56 12.536 56 28Z" fill="#F9ECD3"></path>
 		<path d="M39 18V23H17V18C17 17.7348 17.1054 17.4804 17.2929 17.2929C17.4804 17.1054 17.7348 17 18 17H38C38.2652 17 38.5196 17.1054 38.7071 17.2929C38.8946 17.4804 39 17.7348 39 18Z" fill="black" fill-opacity="0.2"></path>
@@ -306,9 +326,17 @@
 		<path d="M39.55 20.6499V38.4999C39.55 38.7783 39.4394 39.0454 39.2425 39.2423C39.0455 39.4392 38.7785 39.5499 38.5 39.5499H17.5C17.2215 39.5499 16.9545 39.4392 16.7575 39.2423C16.5606 39.0454 16.45 38.7783 16.45 38.4999V20.6499H39.55Z" fill="black" fill-opacity="0.2"></path>
 		<path d="M40.4897 20.18L38.3897 15.98C38.3025 15.8056 38.1683 15.6589 38.0023 15.5564C37.8363 15.4539 37.6451 15.3997 37.45 15.3999H18.55C18.3549 15.3997 18.1637 15.4539 17.9977 15.5564C17.8317 15.6589 17.6975 15.8056 17.6102 15.98L15.5102 20.18C15.4379 20.3261 15.4001 20.4869 15.4 20.6499V38.4999C15.4 39.0568 15.6212 39.591 16.0151 39.9848C16.4089 40.3786 16.943 40.5999 17.5 40.5999H38.5C39.057 40.5999 39.5911 40.3786 39.9849 39.9848C40.3787 39.591 40.6 39.0568 40.6 38.4999V20.6499C40.5999 20.4869 40.5621 20.3261 40.4897 20.18ZM19.1984 17.4999H36.8016L37.8516 19.5999H18.1484L19.1984 17.4999ZM38.5 38.4999H17.5V21.6999H38.5V38.4999ZM32.9429 30.407C33.0405 30.5045 33.1179 30.6203 33.1708 30.7478C33.2236 30.8753 33.2508 31.0119 33.2508 31.1499C33.2508 31.2879 33.2236 31.4245 33.1708 31.552C33.1179 31.6794 33.0405 31.7952 32.9429 31.8927L28.7429 36.0927C28.6454 36.1904 28.5296 36.2678 28.4021 36.3207C28.2746 36.3735 28.138 36.4007 28 36.4007C27.862 36.4007 27.7254 36.3735 27.5979 36.3207C27.4704 36.2678 27.3546 36.1904 27.2571 36.0927L23.0571 31.8927C22.8601 31.6957 22.7494 31.4285 22.7494 31.1499C22.7494 30.8712 22.8601 30.604 23.0571 30.407C23.2541 30.21 23.5214 30.0993 23.8 30.0993C24.0786 30.0993 24.3459 30.21 24.5429 30.407L26.95 32.8154V24.8499C26.95 24.5714 27.0606 24.3043 27.2575 24.1074C27.4545 23.9105 27.7215 23.7999 28 23.7999C28.2785 23.7999 28.5455 23.9105 28.7425 24.1074C28.9394 24.3043 29.05 24.5714 29.05 24.8499V32.8154L31.4571 30.407C31.5546 30.3094 31.6704 30.2319 31.7979 30.1791C31.9254 30.1262 32.062 30.099 32.2 30.099C32.338 30.099 32.4746 30.1262 32.6021 30.1791C32.7296 30.2319 32.8454 30.3094 32.9429 30.407Z" fill="black"></path>
 	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="burger">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12.5C7 12.2239 7.21664 12 7.48387 12H36.5161C36.7834 12 37 12.2239 37 12.5C37 12.7761 36.7834 13 36.5161 13H7.48387C7.21664 13 7 12.7761 7 12.5Z" fill="black"></path>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M7 22C7 21.7239 7.21664 21.5 7.48387 21.5H36.5161C36.7834 21.5 37 21.7239 37 22C37 22.2761 36.7834 22.5 36.5161 22.5H7.48387C7.21664 22.5 7 22.2761 7 22Z" fill="black"></path>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M7 31.5C7 31.2239 7.21664 31 7.48387 31H36.5161C36.7834 31 37 31.2239 37 31.5C37 31.7761 36.7834 32 36.5161 32H7.48387C7.21664 32 7 31.7761 7 31.5Z" fill="black"></path>
+	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="chevron">
 		<rect width="44" height="44" rx="22" fill="white" fill-opacity="0.2"></rect>
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M19.4471 16.4932C19.727 16.1879 20.2015 16.1672 20.5068 16.4471L26.5068 21.9471C26.6618 22.0892 26.75 22.2898 26.75 22.5C26.75 22.7102 26.6618 22.9108 26.5068 23.0529L20.5068 28.5529C20.2015 28.8328 19.727 28.8121 19.4471 28.5068C19.1672 28.2015 19.1879 27.727 19.4932 27.4471L24.8901 22.5L19.4932 17.5529C19.1879 17.273 19.1672 16.7986 19.4471 16.4932Z" fill="white"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="close">
+		<path d="M32.6176 31.9105C32.8066 32.0995 32.8015 32.411 32.6062 32.6062C32.411 32.8015 32.0995 32.8066 31.9105 32.6176L21.9998 22.7069L12.0891 32.6176C11.9001 32.8066 11.5887 32.8015 11.3934 32.6062C11.1981 32.411 11.193 32.0995 11.382 31.9105L21.2927 21.9998L11.3816 12.0887C11.1926 11.8998 11.1978 11.5883 11.393 11.393C11.5883 11.1978 11.8998 11.1926 12.0887 11.3816L21.9998 21.2927L31.9109 11.3816C32.0999 11.1926 32.4113 11.1978 32.6066 11.393C32.8019 11.5883 32.807 11.8998 32.618 12.0887L22.7069 21.9998L32.6176 31.9105Z" fill="black"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" id="list-icon1">
 		<path d="M56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0C43.464 0 56 12.536 56 28Z" fill="#F9ECD3"></path>
@@ -336,7 +364,7 @@
 	</symbol>
 </svg>
 
-		<script src="./js/vendor.js?v=1699921478908"></script>
-		<script src="./js/main.js?v=1699921478908"></script>
+		<script src="./js/vendor.js?v=1699966582458"></script>
+		<script src="./js/main.js?v=1699966582458"></script>
 	</body>
 </html>

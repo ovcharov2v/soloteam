@@ -93,22 +93,54 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var anchorsListList = document.querySelectorAll('.header__nav-link[href^="#"]');
-if (anchorsListList.length) {
-  anchorsListList.forEach(function (a) {
-    a.addEventListener('click', function (event) {
-      event.preventDefault();
-      var hash = event.target.getAttribute('href');
-      var scrollTarget = document.querySelector(hash);
-      var headerHeight = document.querySelector('.header').scrollHeight;
-      window.scrollTo({
-        top: scrollTarget.offsetTop - headerHeight,
-        left: 0,
-        behavior: "smooth"
-      });
+// Smooth scroll
+
+var anchorsListList = document.querySelectorAll('.header__nav-link[href^="#"], .mobile-menu__nav-link[href^="#"]');
+var menuBtn = document.querySelector('.header__menu-btn');
+var header = document.querySelector('.header');
+var mobileMenu = document.querySelector('.mobile-menu');
+var closeMenu = function closeMenu() {
+  document.body.classList.remove('is-locked');
+  header.classList.remove('header--menu');
+  mobileMenu.classList.remove('mobile-menu--active');
+  setTimeout(function () {
+    mobileMenu.style.display = '';
+  }, 300);
+};
+anchorsListList.forEach(function (a) {
+  a.addEventListener('click', function (event) {
+    event.preventDefault();
+    var hash = event.target.getAttribute('href');
+    var scrollTarget = document.querySelector(hash);
+    var headerHeight = document.querySelector('.header').scrollHeight;
+    if (event.target.classList.contains('mobile-menu__nav-link')) {
+      closeMenu();
+    }
+    window.scrollTo({
+      top: scrollTarget.offsetTop - headerHeight,
+      left: 0,
+      behavior: "smooth"
     });
   });
-}
+});
+menuBtn.addEventListener('click', function () {
+  if (header.classList.contains('header--menu')) {
+    closeMenu();
+  } else {
+    header.classList.add('header--menu');
+    mobileMenu.style.display = 'flex';
+    document.body.classList.add('is-locked');
+    setTimeout(function () {
+      mobileMenu.classList.add('mobile-menu--active');
+    });
+  }
+});
+document.addEventListener('click', function (evt) {
+  evt.stopPropagation();
+  if (!evt.target.closest('.mobile-menu') && !evt.target.closest('.header__menu-btn')) {
+    closeMenu();
+  }
+});
 
 /***/ }),
 
